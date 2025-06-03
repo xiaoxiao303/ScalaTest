@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>爱心表白</title>
+    <style>
+        body {
+            background: #ffe6eb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .heart {
+            width: 200px;
+            height: 180px;
+            position: relative;
+            margin-top: 50px;
+            animation: beat 1s infinite;
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            left: 100px;
+            top: 0;
+            width: 100px;
+            height: 160px;
+            background: #ff4d6d;
+            border-radius: 100px 100px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        .heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1);}
+            20% { transform: scale(1.1);}
+            40% { transform: scale(0.95);}
+            60% { transform: scale(1.05);}
+            80% { transform: scale(0.98);}
+        }
+        .message {
+            margin-top: 40px;
+            font-size: 2rem;
+            color: #d72660;
+            font-family: '微软雅黑', 'Arial', sans-serif;
+            text-align: center;
+            text-shadow: 1px 1px 8px #fff0f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <div class="message">
+        亲爱的，<br>
+        我喜欢你很久了，<br>
+        愿意做我的女朋友吗？<br>
+        ❤️
+    </div>
+</body>
+</html>
